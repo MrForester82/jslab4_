@@ -20,6 +20,7 @@
 
     <script>
         function aut(win){
+            var surname = document.getElementById('surname').value;
             win.document.open();
             win.document.write("<!DOCTYPE html>");
             win.document.write("<html lang='en'>");
@@ -38,8 +39,14 @@
             win.document.write("<nav class='navbar navbar-static-top navbar-dark bg-inverse'>");
             win.document.write("<a class='navbar-brand' href='#'>jslab4</a>");
             win.document.write("</nav>");
-            win.document.write("hi");
+            win.document.write("<div class='jumbotron'>");
+            win.document.write("<div class='container'>");
+            win.document.write("<h2>Биография</h2>");
+            win.document.write("<p>Я, " + surname + "</p>");
             
+
+            win.document.write("</div>");
+            win.document.write("</div>");
 
         }
     </script>
@@ -134,15 +141,15 @@
                         <input type="text" id="not_favourite_activity" class="form-control" required>
                     </div>
                 </div>
-
-
             </div>
+
             <p><a href="#"><button class="btn btn-lg btn-primary btn-block" OnClick="aut(win = window.open('new_page.html', 'Биография'));">Сформировать автобиографию</button></a></p>
         </div>
     <hr>
     </div> <!-- /container -->
 </div>
 
+<script src="autobiography.js"></script>
 <script src="jquery.min.js"></script>
 <script src="bootstrap.min.js"></script>
 </body>
