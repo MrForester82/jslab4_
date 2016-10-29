@@ -22,15 +22,14 @@
         function aut()
         {
             
-            var surname = document.getElementById('surname').value;
-            var name = document.getElementById('name').value;
-            var lastname = document.getElementById('lastname').value;
-            var date_of_birth = document.getElementById('date_of_birth').value;
-            var place_of_birth = document.getElementById('place_of_birth').value;
-            var favourite_activity = document.getElementById('favourite_activity').value;
-            var not_favourite_activity = document.getElementById('not_favourite_activity').value;
+            var surname = window.parent.document.getElementById('surname').value;
+            var name = window.parent.document.getElementById('name').value;
+            var lastname = window.parent.document.getElementById('lastname').value;
+            var year_of_birth = window.parent.document.getElementById('year_of_birth').value;
+            var place_of_birth = window.parent.document.getElementById('place_of_birth').value;
+            var favourite_activity = window.parent.document.getElementById('favourite_activity').value;
+            var not_favourite_activity = window.parent.document.getElementById('not_favourite_activity').value;
             
-
             var win = window.open("", "", "width=500,height=500");
             win.document.open();
 
@@ -55,30 +54,13 @@
             win.document.write("    <div class='jumbotron'>");
             win.document.write("        <div class='container'>");
             win.document.write("            <h2>Биография</h2>");
-            win.document.write("            <p>Я, " + surname + " " + name + " " + lastname + " родился в " + date_of_birth + " году в городе " + place_of_birth + ".</p>");
-            //win.document.write("            <p>Больше всего я люблю " + favourite_activity + " и очень не люблю " + not_favourite_activity + ". Было бы замечательно всю жизнь только " + favourite_activity + ", но к сожалению приходится иногда и " + not_favourite_activity + ".</p>");
-            win.document.write("            <p><a href='#'><button class='btn btn-lg btn-primary btn-block' OnClick='window.close());'>Закрыть</button></a></p>");
+            //win.document.write("            <p>Я, " + surname + " " + name + " " + lastname + " родился в " + year_of_birth + ".</p>");
+            win.document.write("            <p>Я, " + surname + " " + name + " " + lastname + " родился в " + year_of_birth + " году в городе " + place_of_birth + ".</p>");
+            win.document.write("            <p>Больше всего я люблю " + favourite_activity + " и очень не люблю " + not_favourite_activity + ". Было бы замечательно всю жизнь только " + favourite_activity + ", но к сожалению приходится иногда и " + not_favourite_activity + ".</p>");
+            win.document.write("            <p><a href='#'><button class='btn btn-lg btn-primary btn-block' OnClick='window.close();'>Закрыть</button></a></p>");
             win.document.write("        </div>");
             win.document.write("    </div>");
 
-/*
-            win.document.write("
-                <link href='bootstrap.min.css' rel='stylesheet'>
-                <link href='jumbotron.css' rel='stylesheet'>
-                <link href='grid.css' rel='stylesheet'>
-                <link href='signin.css' rel='stylesheet'>
-                <nav class='navbar navbar-static-top navbar-dark bg-inverse'>
-                    <a class='navbar-brand' href='#'>jslab4</a>
-                </nav>
-                <div class='jumbotron'>
-                    <div class='container'>
-                        <h2>Биография</h2>
-                        <p>Я, " + surname + " " + name + " " + lastname + " родился в " + date_of_birth + " году в городе " + place_of_birth + ".</p>
-                        <p>Больше всего я люблю " + favourite_activity + " и очень не люблю " + not_favourite_activity + ". Было бы замечательно всю жизнь только " + favourite_activity + ", но к сожалению приходится иногда и " + not_favourite_activity + ".</p>
-                        <p><a href='#'><button class='btn btn-lg btn-primary btn-block' OnClick='window.close());'>Закрыть</button></a></p>
-                    </div>
-                </div>");
-*/
             win.document.write("</body>");
             win.document.close();
         }
@@ -175,20 +157,8 @@
                 </div>
             </div>
 
-            <!--<script>
-/*
-            var surname = document.getElementById('surname').value;
-            var name = document.getElementById('name').value;
-            var lastname = document.getElementById('lastname').value;
-            var date_of_birth = document.getElementById('date_of_birth').value;
-            var place_of_birth = document.getElementById('place_of_birth').value;
-            var favourite_activity = document.getElementById('favourite_activity').value;
-            var not_favourite_activity = document.getElementById('not_favourite_activity').value;
-*/
-            </script>-->
-
             <p><button class="btn btn-lg btn-primary btn-block" 
-            OnClick="aut()">Сформировать автобиографию</button></p>
+            OnClick="aut();">Сформировать автобиографию</button></p>
         
         </div>
     <hr>
